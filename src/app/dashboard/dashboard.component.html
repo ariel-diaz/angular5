@@ -1,0 +1,40 @@
+<button [routerLink]="['/productos']"> IR productos </button>
+<div style="text-align:center">
+  <div style="max-width: 500px; display: inline-block;">
+    <emoji-input [(model)]="text"
+                 [inputClass]="'red'"
+                 [searchClass]="'blue'"
+                 [closeAfterSelection]="true"
+                 style="display: inline-block;"
+                 (click)="openPopup(false)"
+                 (setPopupAction)="setPopupAction($event)">
+    </emoji-input>
+    <button type="button" name="button"  style="display: inline-block;" (click)="openPopup()">
+      Emoticon
+    </button>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <div class="text-left">
+              <p class="lead emoji-picker-container">
+                <input type="email" class="form-control" placeholder="Input field" data-emojiable="true">
+              </p>
+              <p class="lead emoji-picker-container">
+                <input type="email" class="form-control" placeholder="Input with max length of 10" data-emojiable="true" maxlength="10">
+              </p>
+              <p class="lead emoji-picker-container">
+                <textarea class="form-control textarea-control" rows="3" placeholder="Textarea with emoji image input" data-emojiable="true"></textarea>
+              </p>
+              <p class="lead emoji-picker-container">
+                <textarea class="form-control textarea-control" rows="3" placeholder="Textarea with emoji Unicode input" data-emojiable="true" data-emoji-input="unicode"></textarea>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
