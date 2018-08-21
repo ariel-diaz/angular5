@@ -5,6 +5,5 @@ import { AppComponent } from './app.component';
 
 
 export const APP_ROUTES: Routes =  [
-   { path: '', component : DashboardComponent },
-   { path: 'productos', component: HomeComponent }
+   { path: '', component : HomeComponent }
 ];

@@ -1,22 +1,22 @@
-<table>
-  <thead>
-    <tr>
-      <th> Id
+<div class="container">
 
-      </th>
-      <th>
-        NombreASDASDASDAS
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of productos | async">
-      <td>
-        {{item.id}}
-      </td>
-      <td>
-        {{ item.name }}
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+  <span *ngIf="!isLoad" style="text-align: center"> Is Loading ...</span>
+  <ul *ngIf="isLoad">
+    <li *ngFor="let item of values">
+      {{item.id }} - {{ item.title }}
+      <span> {{ item.finish == 1 ? 'Finalizado' : 'OK'}}</span>
+    </li>
+  </ul>
+
+  <div *ngIf="isLoadPaginate">
+      <pagination [boundaryLinks]="true" 
+                  [totalItems]="pagination.totalItems"
+                  [itemsPerPage]="pagination.itemsPerPage"
+                  [(ngModel)]="pagination.currentPage"
+                  (pageChanged)="pageChanged($event)">
+                </pagination>
+    </div>
+
+  
+
