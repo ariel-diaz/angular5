@@ -28,3 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 "# paginate-poc-api" 
 "# paginate-poc-spa" 
 "# paginate-poc-spa" 
+"# paginate-poc-spa" 
